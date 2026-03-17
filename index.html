@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkyVault Cloud Storage</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <h1>SkyVault Cloud Storage</h1>
+      <p>Simple storage for everyone. Start free with <strong>2 TB</strong>, or go premium for <strong>unlimited storage</strong>.</p>
+    </header>
+
+    <section class="plans" aria-label="Storage plans">
+      <article class="plan free" aria-labelledby="free-plan">
+        <h2 id="free-plan">Free Plan</h2>
+        <p class="price">$0 / month</p>
+        <p class="storage">2 TB storage included</p>
+        <ul>
+          <li>Secure file uploads</li>
+          <li>Folder organization</li>
+          <li>Share links</li>
+        </ul>
+        <button class="select-plan" data-plan="Free">Choose Free</button>
+      </article>
+
+      <article class="plan premium" aria-labelledby="premium-plan">
+        <h2 id="premium-plan">Premium Plan</h2>
+        <p class="price">$12 / month</p>
+        <p class="storage">Unlimited storage</p>
+        <ul>
+          <li>Everything in Free</li>
+          <li>Unlimited upload size</li>
+          <li>Priority support</li>
+        </ul>
+        <button class="select-plan" data-plan="Premium">Choose Premium</button>
+      </article>
+    </section>
+
+    <section class="dashboard" aria-live="polite">
+      <h2>Storage Dashboard</h2>
+      <p id="current-plan">Current Plan: <strong>Free</strong></p>
+      <p id="storage-limit">Storage Limit: <strong>2 TB</strong></p>
+      <label for="used-storage">Used Storage</label>
+      <input id="used-storage" type="range" min="0" max="100" value="35" />
+      <div class="meter" role="img" aria-label="Storage usage meter">
+        <div id="meter-fill" class="meter-fill"></div>
+      </div>
+      <p id="usage-text">Using 35% of your 2 TB.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
